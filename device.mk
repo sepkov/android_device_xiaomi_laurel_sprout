@@ -106,5 +106,8 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     LaurelWifiOverlay
 
+# Kernel
+# TARGET_KERNEL=laurel_sprout
+
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)

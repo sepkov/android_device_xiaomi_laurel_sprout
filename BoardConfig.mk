@@ -46,9 +46,6 @@ TARGET_SCREEN_WIDTH := 720
 # Display
 TARGET_SCREEN_DENSITY := 320
 
-# Kernel
-TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
-
 # Partitions
 BOARD_METADATAIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
@@ -68,6 +65,11 @@ VENDOR_SECURITY_PATCH := 2021-09-05
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/xiaomi/laurel_sprout
+#TARGET_KERNEL_CONFIG := defconfig
+TARGET_KERNEL_CONFIG := vendor/laurel_sprout-perf_defconfig
 
 # Inherit the proprietary files
 -include vendor/xiaomi/laurel_sprout/BoardConfigVendor.mk
